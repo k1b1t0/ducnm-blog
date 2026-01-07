@@ -5,7 +5,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPlugin(HtmlBasePlugin);
   return {
-    pathPrefix: "/ducnm-blog/", // Đảm bảo trùng với tên repo
+    pathPrefix: "/ducnm-blog/", 
     dir: {
       input: ".",
       output: "_site"

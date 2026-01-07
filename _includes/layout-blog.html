@@ -1,5 +1,6 @@
 ---
 layout: layout.html
 ---
-<h1> {{title | default: "A post"}}</h1>
+<h1 style="margin-bottom: 0;"> {{title | default: "A post"}}</h1>
+<sub><em>{{ page.date | date: "%d %b %Y" }}</em></sub>
 {{ content }}
