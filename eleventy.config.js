@@ -1,4 +1,4 @@
-const { HtmlBasePlugin } = require("@11ty/eleventy");
+import { HtmlBasePlugin } from "@11ty/eleventy";
 
 export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
