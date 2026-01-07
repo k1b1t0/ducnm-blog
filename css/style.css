@@ -29,7 +29,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-mono);
+  font-family: var(--font-ss);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
