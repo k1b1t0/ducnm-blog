@@ -1,28 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DucNM</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <h1>DucNM | k1b1t0</h1>
-        <nav>
-            <a href="blogs/hello-world.html">Hello World post</a>
-            <a href="blogs/ayyo.html">Ayyo post</a>
-            <a href="blogs/superidol.html">SuperIdol post</a>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About me</h2>
-        </section>
-    </main>
-    <footer>
-        <p>This is my page lol</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+--- 
+layout: layout.html
+---
+<h2>About me</h2>
+<div class="about-profile">
+    <img class="about-icon" src="./assets/images/icon.jpg" alt="just a photo of a fat me" loading="lazy">
+    <div class="about-content">
+        <p>
+            SVBK học muộn nửa năm, fan MU từ 2018, fan Astralis CSGO, fan Fnatic Valorant, ngày xưa còn là fan GTV Liqi
+        </p>
+        <p>
+            Dốt nhưng có nghị lực :D
+        </p>
+    </div>
+</div>
+
+<h2>Blog</h2>
+<p>
+    Tôi viết về những thứ tôi thấy hứng thú
+</p>
+<ul>
+{% for post in collections.post %}
+    <li><h4><a href="{{ post.url }}">{{ post.data.title }} </a></h4></li>
+{% endfor %}
+</ul>
