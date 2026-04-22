@@ -1,11 +1,12 @@
 export default {
-	title: "Eleventy Base Blog v9",
+	title: "DucNM Blog v2",
 	url: "https://example.com/",
-	language: "en",
-	description: "I am writing about my experiences as a naval navel-gazer.",
+	language: "vi",
+	description: "Viết để học, viết để hiểu",
 	author: {
-		name: "Your Name Here",
-		email: "youremailaddress@example.com",
-		url: "https://example.com/about-me/"
+		name: "Duc",
+		email: "nguyenminhduc2882005@gmail.com",
+		github: "https://github.com/k1b1t0",
+		linkedin: "https://www.linkedin.com/in/duc-nm/"
 	}
 }

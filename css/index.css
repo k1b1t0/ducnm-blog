@@ -6,6 +6,10 @@
 
 /* Theme colors */
 :root {
+	color-scheme: light dark;
+}
+
+:root {
 	--color-gray-20: #e0e0e0;
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
@@ -41,9 +45,10 @@
 	box-sizing: border-box;
 }
 
-@view-transition {
+/* Tat di cho do Flash */
+/* @view-transition {
 	navigation: auto;
-}
+} */
 
 html,
 body {
@@ -122,8 +127,13 @@ main :first-child {
 	margin-top: 0;
 }
 
+footer {
+	padding-top: 0;
+	margin-top: 1rem;
+	border-top: 1px solid var(--color-gray-20);
+}
 header {
-	border-bottom: 1px dashed var(--color-gray-20);
+	border-bottom: 1px solid var(--color-gray-20);
 }
 
 #skip-link {

@@ -6,9 +6,12 @@ const eleventyNavigation = {
 
 const numberOfLatestPostsToShow = 3;
 ---
+<h1>Một dòng gì đó khởi đầu</h1>
+<p><em>Cho tôi, cho bạn, những đứa trẻ lạc</em></p>
+
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+<h1>{{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %} mới</h1>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
