@@ -33,21 +33,21 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # 6.0.2
+      - uses: actions/checkout@v3 # 6.0.2
 
       - name: Setup Node
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # 6.3.0
+        uses: actions/setup-node@v3 # 6.3.0
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Cache npm
-        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # 5.0.3
+        uses: actions/cache@v3 # 5.0.3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
 
       - name: Cache Eleventy .cache
-        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # 5.0.3
+        uses: actions/cache@v3 # 5.0.3
         with:
           path: ./.cache
           key: ${{ runner.os }}-eleventy-fetch-cache
