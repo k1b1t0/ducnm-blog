@@ -6,12 +6,15 @@ const eleventyNavigation = {
 
 const numberOfLatestPostsToShow = 3;
 ---
-<h1>Một dòng gì đó khởi đầu</h1>
+<h1>Đây là một trang blog</h1>
 <p><em>Cho tôi, cho bạn, những đứa trẻ lạc</em></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XFkzRNyygfk?si=zdlrzz0HSFDdKwK1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p><i>Radiohead - Creep</i></p>
 
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>{{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %} mới</h1>
+{# <h1>{{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %} mới</h1> #}
+<h1>Mới nhất</h1>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
