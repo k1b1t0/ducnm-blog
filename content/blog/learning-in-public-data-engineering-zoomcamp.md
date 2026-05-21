@@ -13,4 +13,9 @@ tags:
 - Terraform & GCP
 - NYC taxi data pipeline
 
-Free course by @DataTalksClub: https://github.com/DataTalksClub/data-engineering-zoomcamp/
+## 🚀 Module 2 of Data Engineering Zoomcamp done! (2026-05-21)
+
+- @kestra_io workflow orchestration
+- ETL pipelines for taxi data
+- Backfill & scheduling
+- Variables & dynamic flows
