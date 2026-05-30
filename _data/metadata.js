@@ -1,8 +1,8 @@
 export default {
-	title: "DucNM Blog v2",
+	title: "DucNM Blog",
 	url: "https://example.com/",
 	language: "vi",
-	description: "Viết để học, viết để hiểu",
+	description: "I try to write something, express my thoughts",
 	author: {
 		name: "Duc",
 		email: "nguyenminhduc2882005@gmail.com",

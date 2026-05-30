@@ -6,14 +6,14 @@ tags:
 --- 
 
 
-## 🐳 Module 1 of Data Engineering Zoomcamp done! (2026-05-02) 
+## 🐳 Module 1 done! (2026-05-02) 
   
 - Docker containers
 - Postgres & SQL
 - Terraform & GCP
 - NYC taxi data pipeline
 
-## 🚀 Module 2 of Data Engineering Zoomcamp done! (2026-05-21)
+## 🚀 Module 2 done! (2026-05-21)
 
 - @kestra_io workflow orchestration
 - ETL pipelines for taxi data
