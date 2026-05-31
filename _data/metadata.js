@@ -1,5 +1,5 @@
 export default {
-	title: "DucNM Blog",
+	title: "DucNM",
 	url: "https://example.com/",
 	language: "vi",
 	description: "I try to write something, express my thoughts",

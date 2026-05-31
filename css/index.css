@@ -1,7 +1,50 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('/fonts/Lora-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('/fonts/Lora-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Special Elite';
+    src: url('/fonts/SpecialElite-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playwrite GB J';
+    src: url('/fonts/PlaywriteGBJ-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 400; /* Font này thường nhẹ, chỉ có weight từ 100 đến 400 */
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Defaults */
 :root {
-	--font-family: "Lora", system-ui, serif;
+	--font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+	--font-heading: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	--font-handwriting: 'Playwrite GB J', cursive;
+	--font-typewriter: 'Special Elite', 'Courier New', monospace;
 }
 
 /* Theme colors */
@@ -26,6 +69,7 @@
 	--step--1: clamp(0.85rem, 0.8rem + 0.2vw, 0.9rem);
     --step-0: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
     --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+	--step-2: clamp(1.3rem, 1.2rem + 0.4vw, 1.7rem);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,12 +79,15 @@
 		--color-gray-90: #dad8d8;
 
 		/* --text-color is assigned to --color-gray-_ above */
-		--text-color: #d5d0c7;
+		--text-color: #D8CFAE;
 		--text-color-link: #d4a373;
 		--text-color-link-active: #f1e0c5;
 		/* --text-color-link-visited: #f1e0c5; */
 
-		--background-color: #1d1d1b;
+		--background-color: #231C18;
+		h1, h2, h3, h4 {
+			color: #D67252;
+		}
 	}
 }
 
@@ -71,8 +118,20 @@ body {
 	max-width: 40em;
 	font-size: var(--step-0);
 }
+
+h2, h3, h4 {
+	font-family: var(--font-heading);
+}
 h1, h2 {
 	font-size: var(--step-1);
+}
+
+h3 {
+	font-size: var(--step-0);
+}
+
+h4 {
+	font-size: var(--step--1);
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -179,7 +238,9 @@ header {
 	gap: .5em 1em;
 	list-style: "";
 	/* border-top: 1px dashed var(--color-gray-20); */
-	padding: 1em 0;
+	padding: 0;
+	margin: 0;
+	margin-top: 1em;
 }
 .links-nextprev > * {
 	flex-grow: 1;
@@ -234,9 +295,10 @@ header {
 }
 
 .home-link a {
-	font-size: var(--step-1);
+	font-family: var(--font-typewriter);
+	font-size: calc(var(--step-1));
 	font-weight: 700;
-	padding: 0.1em 0;
+	padding-top: 0.1em;
 }
 
 .home-link a:link:not(:hover) {
@@ -312,6 +374,8 @@ header {
 	justify-content: center;
 	text-transform: capitalize;
 	font-style: italic;
+	font-size: var(--step--1);
+	font-family: var(--font-family-monospace);
 }
 .postlist-item > .post-tag {
 	align-self: center;

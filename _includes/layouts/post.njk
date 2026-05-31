@@ -4,20 +4,26 @@ layout: layouts/base.njk
 {# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
 <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style>
 <style>{% include "css/prism-diff.css" %}</style>
-<h1>{{ title }}</h1>
+<h1 style="margin-bottom: 0">{{ title }}</h1>
 
 <ul class="post-metadata">
-	<li style="flex-basis: 100%; margin-bottom: 5px;"><em>
+	<li style="flex-basis: 100%; margin-bottom: 5px; font-size: 0.9em"><em>
 		<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 	</em></li>
+</ul>
+<br></br>
+
+{{ content | safe }}
+
+<br></br>
+
+<ul class="post-metadata">
 	{%- for tag in tags | filterTagList %}
 	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 	<li><a href="{{ tagUrl }}" class="post-tag">#{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
 	{%- endfor %}
 </ul>
-<br><br>
 
-{{ content | safe }}
 
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
