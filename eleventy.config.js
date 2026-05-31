@@ -165,10 +165,4 @@ export const config = {
 	// folder name and does **not** affect where things go in the output folder.
 
 	// pathPrefix: "/",
-
-	pathPrefix: "/ducnm-blog/", // Thêm dòng này để khớp với GitHub Pages
-    dir: {
-        input: "content",
-        output: "_site"
-    },
 };
