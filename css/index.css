@@ -23,13 +23,14 @@
 	--text-color-link: #7b4a2c;
 	--text-color-link-active: #a0643c;
 	--text-color-link-visited: #5f4a3c;
+	--heading-color: #7b4a2c;
 
 	--syntax-tab-size: 2;
 
 	--step--1: clamp(0.85rem, 0.8rem + 0.2vw, 0.9rem);
     --step-0: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
-    --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
-	--step-2: clamp(1.3rem, 1.2rem + 0.4vw, 1.7rem);
+    --step-1: clamp(1.1rem, 1.1rem + 0.5vw, 1.3rem);
+	--step-2: clamp(1.5rem, 1.3rem + 0.4vw, 1.9rem);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,12 +43,10 @@
 		--text-color: #D8CFAE;
 		--text-color-link: #d4a373;
 		--text-color-link-active: #f1e0c5;
+		--heading-color: #D67252;
 		/* --text-color-link-visited: #f1e0c5; */
 
 		--background-color: #231C18;
-		h1, h2, h3, h4 {
-			color: #D67252;
-		}
 	}
 }
 
@@ -79,10 +78,19 @@ body {
 	font-size: var(--step-0);
 }
 
+h1, h2, h3, h4 {
+	color: var(--heading-color);
+}
 h2, h3, h4 {
 	font-family: var(--font-heading);
+	font-weight: 600;
 }
-h1, h2 {
+h1 {
+	font-size: var(--step-2);
+	font-weight: 800;
+}
+
+h2 {
 	font-size: var(--step-1);
 }
 
