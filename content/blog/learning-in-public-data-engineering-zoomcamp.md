@@ -19,3 +19,10 @@ tags:
 - ETL pipelines for taxi data
 - Backfill & scheduling
 - Variables & dynamic flows
+
+## 📊 Module 3 done! (2026-06-02)
+
+- BigQuery & GCS
+- External vs materialized tables
+- Partitioning & clustering
+- Query optimization
