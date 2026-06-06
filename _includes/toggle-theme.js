@@ -21,20 +21,29 @@ function applyTheme(theme) {
     root.setAttribute("data-theme", dataTheme);
 }
 
+function getLabel(theme) {
+    return theme.charAt(0).toUpperCase() + theme.slice(1);
+}
+
+const toggleButton = document.querySelector('.theme-toggle');
+const currentTheme = window.__THEME__ || localStorage.getItem("ducnm-blog-theme") || "system";
+if (toggleButton) {
+    toggleButton.textContent = getLabel(currentTheme);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.theme-toggle').addEventListener('click', (e) => {
-        const currentTheme = localStorage.getItem("ducnm-blog-theme");
-        let nextTheme;
-
-        if (currentTheme === "dark") {
-            nextTheme = "light";
-        } else if (currentTheme === "light") {
-            nextTheme = "system";
+        let next;
+        const current = localStorage.getItem("ducnm-blog-theme") || "system";
+        if (current === "dark") {
+            next = "light";
+        } else if (current === "light") {
+            next = "system";
         } else {
-            nextTheme = "dark";
+            next = "dark";
         }
 
-        applyTheme(nextTheme);
-        e.currentTarget.textContent = nextTheme.charAt(0).toUpperCase() + nextTheme.slice(1);
+        applyTheme(next);
+        e.currentTarget.textContent = getLabel(next);
     })
 })

@@ -8,7 +8,6 @@ const numberOfLatestPostsToShow = 3;
 ---
 <h1>Một không gian</h1>
 <p>Cho tôi, cho bạn, những đứa trẻ lạc</p>
-<p>***</p>
 
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
