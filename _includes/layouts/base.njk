@@ -83,6 +83,13 @@
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
+		<script>
+			document.querySelector('.theme-toggle').addEventListener('click', () => {
+				const root = document.querySelector('html')
+				const currentTheme = root.getAttribute('data-theme')
+				root.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light')
+			})
+		</script>
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -97,6 +104,7 @@
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
+					<li class="nav-item"><button class="theme-toggle">Toggle</button></li>
 				</ul>
 			</nav>
 		</header>
