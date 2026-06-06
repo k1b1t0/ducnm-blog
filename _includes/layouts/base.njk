@@ -83,11 +83,46 @@
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
+		
+		{# Get init color #}
 		<script>
-			document.querySelector('.theme-toggle').addEventListener('click', () => {
-				const root = document.querySelector('html')
-				const currentTheme = root.getAttribute('data-theme')
-				root.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light')
+			const root = document.querySelector('html');
+			const storageColor = localStorage.getItem("ducnm-blog-theme");
+			if (storageColor && storageColor != "system") {
+				root.setAttribute('data-theme', storageColor);
+			} else {
+				const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				localStorage.setItem("ducnm-blog-theme", "system");
+				if (isDarkMode) {
+					root.setAttribute('data-theme', 'dark');
+				} else {
+					root.setAttribute('data-theme', 'light');
+				}
+			}
+		</script>
+		
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				document.querySelector('.theme-toggle').addEventListener('click', () => {
+					const root = document.querySelector('html')
+					const currentTheme = localStorage.getItem("ducnm-blog-theme");
+					
+					if (currentTheme == "dark") {
+						localStorage.setItem("ducnm-blog-theme", "light");
+						root.setAttribute("data-theme", "light");
+					} else if (currentTheme == "light") {
+						localStorage.setItem("ducnm-blog-theme", "system");
+						const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+						if (isDarkMode) {
+							root.setAttribute("data-theme", "dark");
+						} else {
+							root.setAttribute("data-theme", "light");
+						}	
+					} else {
+						localStorage.setItem("ducnm-blog-theme", "dark");
+						root.setAttribute("data-theme", "dark");
+					}
+				})
 			})
 		</script>
 	</head>
