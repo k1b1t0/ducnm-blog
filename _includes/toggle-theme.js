@@ -31,8 +31,11 @@ if (toggleButton) {
     toggleButton.textContent = getLabel(currentTheme);
 }
 
+const switchAudio = new Audio('/sounds/switch.wav');
+
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.theme-toggle').addEventListener('click', (e) => {
+        switchAudio.play();
         let next;
         const current = localStorage.getItem("ducnm-blog-theme") || "system";
         if (current === "dark") {
