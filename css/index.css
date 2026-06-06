@@ -20,13 +20,13 @@ html[data-theme="light"] {
 	--color-gray-50: #a8a090;
 	--color-gray-90: #5c544d;
 
-	--background-color: #f4ecd8;
+	--background-color: #faf8f3;
 
-	--text-color: #3d352a;
-	--text-color-link: #7b4a2c;
+	--text-color: #2c1a0e;
+	--text-color-link: #6B4423;
 	--text-color-link-active: #a0643c;
 	--text-color-link-visited: #5f4a3c;
-	--heading-color: #7b4a2c;
+	--heading-color: #5c3318;
 
 	--syntax-tab-size: 2;
 
@@ -39,7 +39,7 @@ html[data-theme="light"] {
 /* System dark, not light mode */
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme="light"]) {
-		color-scheme: dark;
+		color-scheme: light;
 
 		--color-gray-20: #e0e0e0;
 		--color-gray-50: #C0C0C0;
@@ -105,7 +105,7 @@ h1, h2, h3, h4 {
 	color: var(--heading-color);
 }
 h2, h3, h4 {
-	font-family: var(--font-heading);
+	font-family: var(--font-family);
 	font-weight: 600;
 }
 h1 {
@@ -204,6 +204,25 @@ footer {
 header {
 	border-bottom: 1px solid var(--color-gray-20);
 }
+
+.theme-toggle {
+    background: none;
+    border: none;
+	color: var(--text-color-link);
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theme-toggle:hover {
+	background-color: var(--text-color-link);
+	color: var(--background-color);
+}
+
+
 
 #skip-link {
 	text-decoration: none;

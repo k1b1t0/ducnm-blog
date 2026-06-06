@@ -87,44 +87,23 @@
 		{# Get init color #}
 		<script>
 			const root = document.querySelector('html');
-			const storageColor = localStorage.getItem("ducnm-blog-theme");
-			if (storageColor && storageColor != "system") {
-				root.setAttribute('data-theme', storageColor);
+			const savedTheme = localStorage.getItem("ducnm-blog-theme") || "system";
+			let dataTheme;
+			if (savedTheme != "system") {
+				dataTheme = savedTheme;
 			} else {
 				const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-				localStorage.setItem("ducnm-blog-theme", "system");
 				if (isDarkMode) {
-					root.setAttribute('data-theme', 'dark');
+					dataTheme = "dark";
 				} else {
-					root.setAttribute('data-theme', 'light');
+					dataTheme = "light";
 				}
 			}
+			localStorage.setItem("ducnm-blog-theme", savedTheme);
+			root.setAttribute("data-theme", dataTheme);
 		</script>
 		
-		<script>
-			document.addEventListener('DOMContentLoaded', () => {
-				document.querySelector('.theme-toggle').addEventListener('click', () => {
-					const root = document.querySelector('html')
-					const currentTheme = localStorage.getItem("ducnm-blog-theme");
-					
-					if (currentTheme == "dark") {
-						localStorage.setItem("ducnm-blog-theme", "light");
-						root.setAttribute("data-theme", "light");
-					} else if (currentTheme == "light") {
-						localStorage.setItem("ducnm-blog-theme", "system");
-						const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-						if (isDarkMode) {
-							root.setAttribute("data-theme", "dark");
-						} else {
-							root.setAttribute("data-theme", "light");
-						}	
-					} else {
-						localStorage.setItem("ducnm-blog-theme", "dark");
-						root.setAttribute("data-theme", "dark");
-					}
-				})
-			})
-		</script>
+		
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -139,7 +118,7 @@
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
-					<li class="nav-item"><button class="theme-toggle">Toggle</button></li>
+					<li class="nav-item"><button theme-index="0" class="theme-toggle">Theme</button></li>
 				</ul>
 			</nav>
 		</header>
@@ -156,6 +135,9 @@
 				<em>Một cái footer trống rỗng như tâm hồn tôi</em>
 			</p>
 		</footer>
+
+		{# Toggle theme button event listener #}
+		{% js %}{% include "../toggle-theme.js" %}{% endjs %}
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
