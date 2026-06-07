@@ -7,6 +7,26 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+		{# Get init color #}
+		<script>
+			const root = document.querySelector('html');
+			const savedTheme = localStorage.getItem("ducnm-blog-theme") || "system";
+			let dataTheme;
+			if (savedTheme != "system") {
+				dataTheme = savedTheme;
+			} else {
+				const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				if (isDarkMode) {
+					dataTheme = "dark";
+				} else {
+					dataTheme = "light";
+				}
+			}
+			localStorage.setItem("ducnm-blog-theme", savedTheme);
+			root.setAttribute("data-theme", dataTheme);
+			window.__THEME__ = savedTheme;
+		</script>	
 		
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
@@ -80,26 +100,6 @@
 
 		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
-
-		{# Get init color #}
-		<script>
-			const root = document.querySelector('html');
-			const savedTheme = localStorage.getItem("ducnm-blog-theme") || "system";
-			let dataTheme;
-			if (savedTheme != "system") {
-				dataTheme = savedTheme;
-			} else {
-				const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-				if (isDarkMode) {
-					dataTheme = "dark";
-				} else {
-					dataTheme = "light";
-				}
-			}
-			localStorage.setItem("ducnm-blog-theme", savedTheme);
-			root.setAttribute("data-theme", dataTheme);
-			window.__THEME__ = savedTheme;
-		</script>	
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>	
