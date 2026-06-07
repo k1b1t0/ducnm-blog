@@ -102,14 +102,7 @@
 			localStorage.setItem("ducnm-blog-theme", savedTheme);
 			root.setAttribute("data-theme", dataTheme);
 			window.__THEME__ = savedTheme;
-		</script>
-		
-		{# Set site base url for next scripts #}
-		<script>
-			window.SITE_BASE_URL = "{{ '/' | url}}";
-			console.log(`set window base url ${window.SITE_BASE_URL}`);
-		</script>
-		
+		</script>		
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -143,7 +136,7 @@
 		</footer>
 
 		{# Toggle theme button event listener #}
-		{% js %}{% include "../toggle-theme.js" %}{% endjs %}
+		{% js %}{% include "../toggle-theme.js.njk" %}{% endjs %}
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
