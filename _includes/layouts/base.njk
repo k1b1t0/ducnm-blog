@@ -10,23 +10,24 @@
 
 		{# Get init color #}
 		<script>
-			const root = document.querySelector('html');
+			const root = document.documentElement;
 			const savedTheme = localStorage.getItem("ducnm-blog-theme") || "system";
-			let dataTheme;
-			if (savedTheme != "system") {
-				dataTheme = savedTheme;
-			} else {
-				const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-				if (isDarkMode) {
-					dataTheme = "dark";
-				} else {
-					dataTheme = "light";
-				}
+			let dataTheme = savedTheme;
+			if (savedTheme === "system") {
+				dataTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
 			}
 			localStorage.setItem("ducnm-blog-theme", savedTheme);
 			root.setAttribute("data-theme", dataTheme);
 			window.__THEME__ = savedTheme;
-		</script>	
+		</script>
+
+		<!-- Temporary style to prevent transition flashes on load -->
+		<style id="no-transition">
+			*, *::before, *::after {
+				transition: none !important;
+				animation: none !important;
+			}
+		</style>	
 		
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
@@ -44,8 +45,9 @@
 
 		{#- Add CSS to the bundle #}
 
+		<link rel="preload" href="/fonts/Lora-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
 		<link rel="preload" href="/fonts/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
-		<link rel="preload" href="/fonts/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
+		<link rel="preload" href="/fonts/SpecialElite-Regular.ttf" as="font" type="font/ttf" crossorigin>
 
 		<style>
 			@font-face {
@@ -117,7 +119,15 @@
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
-					<li class="nav-item"><button theme-index="0" class="theme-toggle">Theme</button></li>
+					<li class="nav-item">
+						<button theme-index="0" class="theme-toggle">Theme</button>
+						<script>
+							{
+								const theme = localStorage.getItem("ducnm-blog-theme") || "system";
+								document.querySelector('.theme-toggle').textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+							}
+						</script>
+					</li>
 				</ul>
 			</nav>
 		</header>

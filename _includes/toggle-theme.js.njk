@@ -18,22 +18,22 @@ function applyTheme(theme) {
     }
 
     localStorage.setItem("ducnm-blog-theme", theme);
-    root.setAttribute("data-theme", dataTheme);
+    document.documentElement.setAttribute("data-theme", dataTheme);
 }
 
 function getLabel(theme) {
     return theme.charAt(0).toUpperCase() + theme.slice(1);
 }
 
-const toggleButton = document.querySelector('.theme-toggle');
-const currentTheme = window.__THEME__ || localStorage.getItem("ducnm-blog-theme") || "system";
-if (toggleButton) {
-    toggleButton.textContent = getLabel(currentTheme);
-}
-
 const switchAudio = new Audio('{{ "/sounds/switch.wav" | url }}');
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Remove the no-transition style block to re-enable transitions for user interactions
+    const noTransitionStyle = document.getElementById('no-transition');
+    if (noTransitionStyle) {
+        noTransitionStyle.remove();
+    }
+
     document.querySelector('.theme-toggle').addEventListener('click', (e) => {
         switchAudio.play();
         let next;
