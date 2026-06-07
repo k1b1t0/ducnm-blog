@@ -27,14 +27,17 @@ function getLabel(theme) {
 
 const switchAudio = new Audio('{{ "/sounds/switch.wav" | url }}');
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Remove the no-transition style block to re-enable transitions for user interactions
-    const noTransitionStyle = document.getElementById('no-transition');
-    if (noTransitionStyle) {
+// Remove the no-transition style block after the first paint to re-enable transitions
+const noTransitionStyle = document.getElementById('no-transition');
+if (noTransitionStyle) {
+    requestAnimationFrame(() => {
         noTransitionStyle.remove();
-    }
+    });
+}
 
-    document.querySelector('.theme-toggle').addEventListener('click', (e) => {
+const toggleButton = document.querySelector('.theme-toggle');
+if (toggleButton) {
+    toggleButton.addEventListener('click', (e) => {
         switchAudio.play();
         let next;
         const current = localStorage.getItem("ducnm-blog-theme") || "system";
@@ -48,5 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         applyTheme(next);
         e.currentTarget.textContent = getLabel(next);
-    })
-})
+    });
+}
