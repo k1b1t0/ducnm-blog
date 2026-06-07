@@ -34,6 +34,8 @@ if (toggleButton) {
 }
 
 const switchAudio = new Audio(`${baseUrl}sounds/switch.wav`);
+console.log(window.SITE_BASE_URL)
+console.log(`Switch Audio: ${baseUrl}sounds/switch.wav`)
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.theme-toggle').addEventListener('click', (e) => {
