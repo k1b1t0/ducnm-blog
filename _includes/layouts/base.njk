@@ -104,6 +104,10 @@
 			window.__THEME__ = savedTheme;
 		</script>
 		
+		{# Set site base url for next scripts #}
+		<script>
+			window.SITE_BASE_URL = "{{ '/' | url}}";
+		</script>
 		
 	</head>
 	<body>
