@@ -15,7 +15,7 @@
 /* Default light theme */
 :root,
 html[data-theme="light"] {
-	color-scheme: dark;
+	color-scheme: light;
 	--color-gray-20: #d6cfbe;
 	--color-gray-50: #a8a090;
 	--color-gray-90: #5c544d;
@@ -39,7 +39,7 @@ html[data-theme="light"] {
 /* System dark, not light mode */
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme="light"]) {
-		color-scheme: light;
+		color-scheme: dark;
 
 		--color-gray-20: #e0e0e0;
 		--color-gray-50: #C0C0C0;
