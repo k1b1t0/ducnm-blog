@@ -19,14 +19,6 @@
 			localStorage.setItem("ducnm-blog-theme", savedTheme);
 			root.setAttribute("data-theme", dataTheme);
 		</script>
-
-		<!-- Temporary style to prevent transition flashes on load -->
-		<style id="no-transition" eleventy:ignore>
-			*, *::before, *::after {
-				transition: none !important;
-				animation: none !important;
-			}
-		</style>	
 		
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
@@ -106,7 +98,7 @@
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>	
 	</head>
-	<body>
+	<body class="no-transition">
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>

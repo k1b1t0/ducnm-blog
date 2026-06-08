@@ -79,16 +79,14 @@ html[data-theme="dark"] {
 	box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-	transition: background-color 0.3s ease, color 0.2s ease, border-color 0.2s ease;
+.no-transition * {
+    transition: none !important;
 }
 
 /* Tat di cho do Flash */
-/* @view-transition {
+@view-transition {
 	navigation: auto;
-} */
+}
 
 html,
 body {
@@ -97,11 +95,12 @@ body {
 	font-family: var(--font-family);
 	font-weight: 500;
 	color: var(--text-color);
-	background-color: var(--background-color);
 }
 
 html {
 	overflow-y: scroll;
+	transition: background-color 0.3s ease;
+	background-color: var(--background-color);
 }
 
 body {
@@ -191,7 +190,7 @@ li {
 
 a[href] {
 	color: var(--text-color-link);
-	transition: all 0.1s ease-in-out;
+	transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 	/* Tạo cảm giác mượt mà */
 	text-decoration: none;
 }
