@@ -38,7 +38,9 @@ if (noTransitionStyle) {
 const toggleButton = document.querySelector('.theme-toggle');
 if (toggleButton) {
     toggleButton.addEventListener('click', (e) => {
-        switchAudio.play();
+        switchAudio.currentTime = 0;
+        switchAudio.play().catch(() => {});
+
         let next;
         const current = localStorage.getItem("ducnm-blog-theme") || "system";
         if (current === "dark") {
