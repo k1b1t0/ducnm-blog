@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ metadata.language }}">
+<html lang="{{ metadata.language }}" class="no-transition">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -98,7 +98,7 @@
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>	
 	</head>
-	<body class="no-transition">
+	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
@@ -112,7 +112,7 @@
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
 					<li class="nav-item">
-						<button theme-index="0" class="theme-toggle">Theme</button>
+						<button class="theme-toggle"></button>
 						<script>
 							{
 								const theme = localStorage.getItem("ducnm-blog-theme") || "system";

@@ -9,7 +9,13 @@
 
 /* Theme colors */
 :root {
-	color-scheme: light dark;
+	/* color-scheme: light dark; */
+	--syntax-tab-size: 2;
+
+	--step--1: clamp(0.85rem, 0.8rem + 0.2vw, 0.9rem);
+	--step-0: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+	--step-1: clamp(1.1rem, 1.1rem + 0.5vw, 1.3rem);
+	--step-2: clamp(1.5rem, 1.3rem + 0.4vw, 1.9rem);
 }
 
 /* Default light theme */
@@ -23,21 +29,14 @@ html[data-theme="light"] {
 	--background-color: #faf8f3;
 
 	--text-color: #2c1a0e;
-	--text-color-link: #6B4423;
+	--text-color-link: #963722;
 	--text-color-link-active: #a0643c;
 	--text-color-link-visited: #5f4a3c;
-	--heading-color: #5c3318;
-
-	--syntax-tab-size: 2;
-
-	--step--1: clamp(0.85rem, 0.8rem + 0.2vw, 0.9rem);
-	--step-0: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
-	--step-1: clamp(1.1rem, 1.1rem + 0.5vw, 1.3rem);
-	--step-2: clamp(1.5rem, 1.3rem + 0.4vw, 1.9rem);
+	--heading-color: #963722;
 }
 
 /* System dark, not light mode */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	:root:not([data-theme="light"]) {
 		color-scheme: dark;
 
@@ -46,15 +45,15 @@ html[data-theme="light"] {
 		--color-gray-90: #dad8d8;
 
 		/* --text-color is assigned to --color-gray-_ above */
-		--text-color: #D8CFAE;
+		/* --text-color: #D8CFAE;
 		--text-color-link: #d4a373;
 		--text-color-link-active: #f1e0c5;
-		--heading-color: #D67252;
+		--heading-color: #D67252; */
 		/* --text-color-link-visited: #f1e0c5; */
 
-		--background-color: #231C18;
-	}
-}
+		/* --background-color: #231C18; */
+	/* }
+} */
 
 /* Dark mode */
 html[data-theme="dark"] {
@@ -92,6 +91,9 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
+	width: 100%;
+	min-height: 100vh;
+
 	font-family: var(--font-family);
 	font-weight: 500;
 	color: var(--text-color);
@@ -99,13 +101,13 @@ body {
 
 html {
 	overflow-y: scroll;
-	transition: background-color 0.3s ease;
-	background-color: var(--background-color);
+	background-color: transparent;
 }
 
 body {
-	max-width: 40em;
 	font-size: var(--step-0);
+	transition: background-color 0.3s ease;
+	background-color: var(--background-color);
 }
 
 h1,
@@ -210,6 +212,11 @@ a[href]:active {
 	color: var(--text-color-link-active);
 } */
 
+header, main, footer {
+	max-width: 40em;
+	margin: 0 auto;
+	width: 100%;
+}
 
 main,
 footer {
