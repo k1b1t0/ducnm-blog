@@ -84,9 +84,9 @@ html[data-theme="dark"] {
 }
 
 /* Tat di cho do Flash */
-@view-transition {
+/* @view-transition {
 	navigation: auto;
-}
+} */
 
 html,
 body {
