@@ -125,19 +125,19 @@ h1,
 h2,
 h3,
 h4 {
+	font-family: var(--font-heading);
 	color: var(--heading-color);
 }
 
 h2,
 h3,
 h4 {
-	font-family: var(--font-family);
 	font-weight: 600;
 }
 
 h1 {
 	font-size: var(--step-2);
-	font-weight: 800;
+	font-weight: 700;
 }
 
 h2 {
@@ -380,7 +380,7 @@ header {
 }
 
 .home-link a {
-	font-family: var(--font-typewriter);
+	font-family: var(--font-heading);
 	font-size: calc(var(--step-1));
 	font-weight: 700;
 	padding-top: 0.1em;
@@ -398,6 +398,7 @@ header {
 	margin: 0;
 	list-style: none;
 	align-items: center;
+	font-family: var(--font-heading);
 }
 
 .nav-item {
@@ -448,9 +449,10 @@ header {
 }
 
 .postlist-link {
+	font-family: var(--font-heading);
 	font-size: 1.1875em;
 	/* 19px /16 */
-	font-weight: 700;
+	font-weight: 600;
 	flex-basis: calc(100% - 1.5rem);
 	padding-left: .25em;
 	padding-right: .5em;

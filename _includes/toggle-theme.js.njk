@@ -27,11 +27,8 @@ if (toggleButton) {
         switchAudio.currentTime = 0;
         switchAudio.play().catch(() => {});
 
+        const current = document.documentElement.getAttribute("data-theme") || "system";
         let next;
-        let current = "system";
-        try {
-            current = localStorage.getItem("ducnm-blog-theme") || "system";
-        } catch (e) {}
 
         if (current === "dark") {
             next = "light";

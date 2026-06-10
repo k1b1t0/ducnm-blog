@@ -13,7 +13,12 @@
 			(function() {
 				try {
 					const root = document.documentElement;
-					const savedTheme = localStorage.getItem("ducnm-blog-theme") || "system";
+					let savedTheme = "system";
+					try {
+						savedTheme = localStorage.getItem("ducnm-blog-theme") || "system";
+					} catch (e) {
+						console.warn("localStorage is not accessible:", e);
+					}
 					root.setAttribute("data-theme", savedTheme);
 					
 					let dataTheme = savedTheme;
