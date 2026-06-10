@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ metadata.language }}" class="no-transition">
+<html lang="{{ metadata.language }}" class="no-transition" data-theme="system">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +9,22 @@
 		<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 
 		{# Get init color #}
-		<script>
-			const root = document.documentElement;
-			const savedTheme = localStorage.getItem("ducnm-blog-theme") || "system";
-			let dataTheme = savedTheme;
-			if (savedTheme === "system") {
-				dataTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
-			}
-			localStorage.setItem("ducnm-blog-theme", savedTheme);
-			root.setAttribute("data-theme", dataTheme);
+		<script eleventy:ignore>
+			(function() {
+				try {
+					const root = document.documentElement;
+					const savedTheme = localStorage.getItem("ducnm-blog-theme") || "system";
+					root.setAttribute("data-theme", savedTheme);
+					
+					let dataTheme = savedTheme;
+					if (savedTheme === "system") {
+						dataTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+					}
+					root.style.setProperty('color-scheme', dataTheme);
+				} catch (e) {
+					console.error("Theme initialization failed:", e);
+				}
+			})();
 		</script>
 		
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
@@ -112,13 +119,17 @@
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
 					<li class="nav-item">
-						<button class="theme-toggle"></button>
-						<script>
-							{
-								const theme = localStorage.getItem("ducnm-blog-theme") || "system";
-								document.querySelector('.theme-toggle').textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
-							}
-						</script>
+						<button class="theme-toggle" aria-label="Toggle theme">
+							<span class="theme-icon theme-icon-system" aria-hidden="true">
+								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+							</span>
+							<span class="theme-icon theme-icon-dark" aria-hidden="true">
+								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+							</span>
+							<span class="theme-icon theme-icon-light" aria-hidden="true">
+								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+							</span>
+						</button>
 					</li>
 				</ul>
 			</nav>
