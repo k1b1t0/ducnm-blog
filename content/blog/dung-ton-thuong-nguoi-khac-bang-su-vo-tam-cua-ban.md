@@ -1,6 +1,8 @@
 ---
 title: "Đừng tổn thương người khác bằng sự vô tâm của bạn"
 date: "2026-06-15T18:16:50+07:00"
+tags:
+    - fleeting
 --- 
 
 Là một điều khó vãi l*.
