@@ -43,6 +43,7 @@ cat <<EOF > "$FILE_PATH"
 ---
 title: "$TITLE"
 date: "$DATE"
+tags:
 --- 
 
 EOF
