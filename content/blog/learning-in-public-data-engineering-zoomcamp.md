@@ -4,7 +4,7 @@ date: "2026-05-02T08:26:55+07:00"
 tags:
     - study
 --- 
-
+Free course by @DataTalksClub: https://github.com/DataTalksClub/data-engineering-zoomcamp/
 
 ## 🐳 Module 1 done! (2026-05-02) 
   
@@ -26,3 +26,17 @@ tags:
 - External vs materialized tables
 - Partitioning & clustering
 - Query optimization
+
+## 📈 Module 4 done! (2026-06-12)
+
+- Analytics Engineering with dbt
+- Transformation models & tests
+- Data lineage & dependencies
+- NYC taxi revenue analysis
+
+## 📊 Module 5 done! (2026-07-08)
+
+- Data Platforms with Bruin
+- End-to-end ELT pipelines
+- Data quality & lineage
+- Deployment to BigQuery
