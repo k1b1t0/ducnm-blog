@@ -41,7 +41,7 @@ Free course by @DataTalksClub: https://github.com/DataTalksClub/data-engineering
 - Data quality & lineage
 - Deployment to BigQuery
 
-## ⚡ Module 6 of Data Engineering Zoomcamp done!
+## ⚡ Module 6 done! (2026-07-17)
 
 - Batch processing with Spark 🔥
 - PySpark & DataFrames
@@ -49,3 +49,10 @@ Free course by @DataTalksClub: https://github.com/DataTalksClub/data-engineering
 - Spark UI on port 4040
 - Spark Cluster không có mạng nên không cài được Docker và bị lặp => Mất 1 tiếng để tìm lỗi và cài Cloud NAT
 - Default Setting cấu hình thấp nên tràn RAM sập mà không báo lỗi => Mất 1 tiếng rưỡi mới tìm ra lỗi và tăng lên 16GB (yeah)
+
+## Module 7 of Data Engineering Zoomcamp done! (2026-07-27)
+
+- Kafka producers and consumers
+- PyFlink tumbling and session windows
+- Real-time taxi data analysis
+- Redpanda as Kafka replacement
