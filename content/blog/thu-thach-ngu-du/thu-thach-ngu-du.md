@@ -7,13 +7,13 @@ Tôi thường ngủ từ 10 giờ tối rồi dậy lúc 5 rưỡi sáng. Tho�
 
 ![alt text](image.png)
 
-Điều này có vẻ tệ hơn việc ngủ muộn đều (tôi đọc trên mạng thì bảo thế).
+Điều này có vẻ tệ hơn việc ngủ muộn đều (tôi đọc trên mạng là thế).
 
 Nhìn lại tình trạng giấc ngủ hiện tại của tôi:
 
-	- Đôi lúc buổi sáng tôi cảm thấy khá buồn ngủ, dù mình ngủ cũng không quá ít, kể cả sau khi uống cafe mọi thứ vẫn lờ đờ uể oải
-	- Buổi tối tầm 8h, sau khi ăn xong là tôi đã khá uể oải rồi, khó mà làm những việc đòi hỏi tư duy
-	- Những lần cố gắng cày việc, kết quả thì hoàn thành vội, tối thức khuya muộn xong hôm sau cả ngày uể oải, và nếu nhìn kỹ lại, hoá ra tôi còn ngủ nhiều hơn bình thường, nghĩa là nó còn tốn nhiều thời gian (chạy deadline) hơn.
+- Đôi lúc buổi sáng tôi cảm thấy khá buồn ngủ, dù mình ngủ cũng không quá ít, kể cả sau khi uống cafe mọi thứ vẫn lờ đờ uể oải
+- Buổi tối tầm 8h, sau khi ăn xong là tôi đã khá uể oải rồi, khó mà làm những việc đòi hỏi tư duy
+- Những lần cố gắng cày việc, kết quả thì hoàn thành vội, tối thức khuya muộn xong hôm sau cả ngày uể oải, và nếu nhìn kỹ lại, hoá ra tôi còn ngủ nhiều hơn bình thường, nghĩa là nó còn tốn nhiều thời gian (chạy deadline) hơn.
 
 Vì vậy tranh thủ khoảng thời gian xa nhà này, cũng hữu duyên xem được [video](https://www.youtube.com/watch?v=nFJokh0qfjU&t=858s) này. Tôi quyết định làm một thử thách để xem nếu bản thân "tuân thủ tuyệt đối" ưu tiên việc ngủ lên hàng đầu, liệu ***tôi có cảm thấy tốt hơn không***. 
 
