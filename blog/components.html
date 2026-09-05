@@ -1,17 +1,5 @@
 <!doctype html+dhtml>
 
-<script>
-  import { get } from 'crud'
-  import { state } from 'state'
-
-  state.setup({
-    query: ['query'],
-    emit_only: ['deleted'],
-    memory: ['ondelete'],
-    autolink: true,
-  })
-</script>
-
 <pagehead>
   <pretty-date :date="date" /> • <span>{ author }</span>
 </pagehead>
@@ -31,3 +19,7 @@
     </td>
   </tr>
 </table>
+
+<div :is="blog-search" class="search-box">
+  <input type="search" id="blog-search-input" placeholder="Search posts by title, tag, date..." autofocus>
+</div>
