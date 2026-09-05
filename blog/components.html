@@ -1,0 +1,33 @@
+<!doctype html+dhtml>
+
+<script>
+  import { get } from 'crud'
+  import { state } from 'state'
+
+  state.setup({
+    query: ['query'],
+    emit_only: ['deleted'],
+    memory: ['ondelete'],
+    autolink: true,
+  })
+</script>
+
+<pagehead>
+  <pretty-date :date="date" /> • <span>{ author }</span>
+</pagehead>
+
+<pagefoot>
+  <span :if="tags">
+    <span :each="tag in tags" class="tag">{ tag + " " }</span>
+  </span>
+</pagefoot>
+
+<table :is="blog-entries">
+  <tr :each="page in blog">
+    <td><pretty-date :date="page.date" /></td>
+    <td>
+      <a href="{ page.url }">{ page.title }</a>
+      <p>{{ markdown(page.description) }}</p>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,13 @@
+<div :is="blog-search" class="search-box">
+  <input type="search" placeholder="Search posts by title, tag, date..." oninput="searchPosts(this.value)" autofocus />
+
+  <script>
+    function searchPosts(query) {
+      const q = query.toLowerCase().trim()
+      document.querySelectorAll('table tr').forEach(row => {
+        const text = row.textContent.toLowerCase()
+        row.hidden = Boolean(q && !text.includes(q))
+      })
+    }
+  </script>
+</div>
