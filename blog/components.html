@@ -22,9 +22,17 @@
   <input type="search" id="blog-search-input" placeholder="Search posts by title, tag, date..." autofocus>
 </div>
 
-<!-- Dynamic Masonry Gallery Component -->
+<!-- Dynamic Masonry Gallery Component with Lightbox -->
 <section :is="gallery" class="masonry" :if="folder && photos">
   <figure :each="file in photos.split(',')">
-    <img src="/@shared/images/{ folder }/{ file.trim() }" loading="lazy">
+    <img src="/@shared/images/{ folder }/{ file.trim() }" loading="lazy" class="lightbox-trigger">
   </figure>
+
+  <!-- Image Viewer Modal (Native HTML5 Dialog) -->
+  <dialog id="lightbox-dialog" class="lightbox-modal">
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <button class="lightbox-prev" aria-label="Previous">❮</button>
+    <img id="lightbox-img" src="" alt="Zoomed view">
+    <button class="lightbox-next" aria-label="Next">❯</button>
+  </dialog>
 </section>
