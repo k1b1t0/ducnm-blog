@@ -3,6 +3,9 @@
   "description": "Full nue template with raw/brutalist design system",
   "type": "module",
   "scripts": {
-    "build": "nue build --production"
+    "build": "nuekit build --production"
+  },
+  "dependencies": {
+    "nuekit": "latest"
   }
 }
