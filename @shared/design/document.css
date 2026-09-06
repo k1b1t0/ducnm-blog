@@ -1,4 +1,3 @@
-
 /* For content heavy documents only (excluded from single-page-apps) */
 
 @layer base {
@@ -6,22 +5,27 @@
   article {
     flex-direction: column;
     display: flex;
-    gap: var(--xl); /* section gaps */
+    gap: var(--xl);
+    /* section gaps */
   }
 
-  h1, h2, h3, p, li {
+  h1,
+  h2,
+  h3,
+  p,
+  li {
     max-width: var(--max-line-width)
   }
 
   h1 {
     font-size: 2.25em;
-    & + p, & + time + p {
+    /* & + p, & + time + p {
       font-size: 1.125em;
       text-wrap: balance;
-    }
+    } */
   }
 
-  section > :is(h3, h4) {
+  section> :is(h3, h4) {
     margin-top: var(--l)
   }
 }
@@ -42,10 +46,16 @@
       column-count: var(--column-count, 2);
       margin-block: var(--l);
       column-gap: var(--xl);
-      div { break-inside: avoid }
+
+      div {
+        break-inside: avoid
+      }
 
       > :first-child {
-        &, h2, h3 {
+
+        &,
+        h2,
+        h3 {
           margin-top: 0
         }
       }
@@ -58,7 +68,10 @@
     max-width: var(--max-line-width);
     margin-block: var(--m);
     padding: 1em;
-    p { margin: 0 }
+
+    p {
+      margin: 0
+    }
   }
 
 }

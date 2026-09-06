@@ -43,7 +43,7 @@ Chemical formula or notes can be written cleanly, and abbreviations like HTML an
 
 > "Simplicity is about subtracting the obvious and adding the meaningful."
 >
-> — <cite>John Maeda, The Laws of Simplicity</cite>
+> — John Maeda, The Laws of Simplicity
 
 ### Nested Blockquote
 

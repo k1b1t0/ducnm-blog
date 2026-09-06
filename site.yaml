@@ -3,9 +3,10 @@
 meta:
   title_template: "%s / DucNM"
   description: DucNM's Blog
+  favicon: /favicon.svg
 
   # default author for blog entries
-  author: Emma Bennet
+  author: Duc
 
 site:
   origin: https://acme.org
@@ -15,7 +16,7 @@ sitemap:
   enabled: true
 
 rss:
-  title: UX developer blog
+  title: DucNM Blog
   collection: blog
   enabled: true
 

@@ -1,6 +1,6 @@
 {
   "markdown.copyFiles.destination": {
-    "blog/*.md": "${documentBaseName}-${fileName}",
-    "docs/*.md": "${documentBaseName}-${fileName}"
+    "blog/*.md": "/@shared/images/${documentBaseName}-${fileName}",
+    "docs/*.md": "/@shared/images/${documentBaseName}-${fileName}"
   }
 }
