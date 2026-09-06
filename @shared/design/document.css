@@ -3,6 +3,7 @@
 @layer base {
 
   article {
+    font-size: 1.125rem;
     flex-direction: column;
     display: flex;
     gap: var(--xl);
@@ -15,12 +16,6 @@
   p,
   li {
     max-width: var(--max-line-width)
-  }
-
-  p,
-  li {
-    font-size: 1.125em;
-    line-height: 1.65;
   }
 
   h1 {
