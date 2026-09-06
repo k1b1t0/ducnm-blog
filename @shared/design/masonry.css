@@ -39,7 +39,7 @@
   cursor: zoom-in;
 }
 
-.lightbox-modal {
+#lightbox-dialog {
   border: none;
   background: transparent;
   padding: 0;
@@ -116,7 +116,7 @@
 
 
 @media (max-width: 600px) {
-  .lightbox-modal {
+  #lightbox-dialog {
     .lightbox-prev {
       left: 0.5rem;
       width: 40px;
