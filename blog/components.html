@@ -1,5 +1,3 @@
-<!doctype html+dhtml>
-
 <pagehead>
   <pretty-date :date="date" /> • <span>{ author }</span>
 </pagehead>
@@ -23,3 +21,10 @@
 <div :is="blog-search" class="search-box">
   <input type="search" id="blog-search-input" placeholder="Search posts by title, tag, date..." autofocus>
 </div>
+
+<!-- Dynamic Masonry Gallery Component -->
+<section :is="gallery" class="masonry" :if="folder && photos">
+  <figure :each="file in photos.split(',')">
+    <img src="/@shared/images/{ folder }/{ file.trim() }" loading="lazy">
+  </figure>
+</section>
