@@ -1,5 +1,6 @@
 .dist
 .nue
+node_modules
 
 *.sh
 .vscode
