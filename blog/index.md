@@ -2,6 +2,7 @@
 ---
 pagehead: false
 skip: true
+include: [search.js]
 ---
 
 # Blog

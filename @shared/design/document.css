@@ -17,6 +17,12 @@
     max-width: var(--max-line-width)
   }
 
+  p,
+  li {
+    font-size: 1.125em;
+    line-height: 1.65;
+  }
+
   h1 {
     font-size: 2.25em;
     /* & + p, & + time + p {
