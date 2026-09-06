@@ -1,8 +1,10 @@
-
 /* Content elements (headings, paragraphs, lists, images, blockquotes, ...) */
 
 @layer base {
-  *, *:before, *:after {
+
+  *,
+  *:before,
+  *:after {
     box-sizing: border-box;
   }
 
@@ -17,28 +19,49 @@
     height: auto;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     margin-block: 0.5em;
     text-wrap: balance;
     line-height: 1.25;
-    + p { margin-top: 0 }
+
+    +p {
+      margin-top: 0
+    }
   }
 
-  ol, ul, table {
+  ol,
+  ul,
+  table {
     margin-block: var(--m)
   }
 
   a {
     color: var(--link);
-    &:visited { color: var(--visited); }
-    &[name] { color: inherit }
-    &:target { background-color: #fff3cd }
+
+    &:visited {
+      color: var(--visited);
+    }
+
+    &[name] {
+      color: inherit
+    }
+
+    &:target {
+      background-color: #fff3cd
+    }
   }
 
-  strong { color: var(--base-800) }
+  strong {
+    color: var(--base-800)
+  }
 
 
-  p, li, td {
+  p,
+  li,
+  td {
     color: var(--base-600);
     text-wrap: pretty;
 
@@ -50,9 +73,14 @@
     }
   }
 
-  ol, ul { padding-left: 1em }
+  ol,
+  ul {
+    padding-left: 1em
+  }
 
-  li { padding-left: .5em }
+  li {
+    padding-left: .5em
+  }
 
   hr {
     border: 1px solid var(--base-200);
@@ -81,7 +109,8 @@
     }
   }
 
-  small, figcaption {
+  small,
+  figcaption {
     font-weight: 400;
     font-size: .875em;
     color: var(--base-600);
@@ -89,10 +118,19 @@
 
   dl {
     display: grid;
-    grid-template-columns:25% 1fr;
-    > * { margin: .25em 0 }
-    dt { font-weight: 500 }
-    p:first-child { margin-top: 0 }
+    grid-template-columns: 25% 1fr;
+
+    >* {
+      margin: .25em 0
+    }
+
+    dt {
+      font-weight: 500
+    }
+
+    p:first-child {
+      margin-top: 0
+    }
   }
 
   time {

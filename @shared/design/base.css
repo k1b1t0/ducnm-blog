@@ -1,4 +1,3 @@
-
 @layer base, component, modifier;
 
 @layer base {
@@ -26,5 +25,3 @@
     --max-line-width: 45rem;
   }
 }
-
-
