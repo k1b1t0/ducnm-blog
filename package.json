@@ -3,7 +3,7 @@
   "description": "Full nue template with raw/brutalist design system",
   "type": "module",
   "scripts": {
-    "build": "nuekit build --production"
+    "build": "bun run --bun nue build"
   },
   "dependencies": {
     "nuekit": "latest"
