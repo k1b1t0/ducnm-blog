@@ -1,9 +1,8 @@
 function initLightbox() {
   const dialog = document.querySelector('#lightbox-dialog')
   const lightboxImg = document.querySelector('#lightbox-img')
-  const triggers = Array.from(document.querySelectorAll('.lightbox-trigger'))
+  const triggers = Array.from(document.querySelectorAll('article img:not(#lightbox-img)'))
 
-  // Chỉ hoạt động khi trang hiện tại có modal và có ảnh
   if (!dialog || !lightboxImg || !triggers.length) return
 
   let currentIndex = 0
@@ -15,18 +14,23 @@ function initLightbox() {
     lightboxImg.src = triggers[currentIndex].src
   }
 
-  // Gán sự kiện click cho từng ảnh của trang hiện tại
+  // Click event cho tung anh
   triggers.forEach((img, index) => {
+    img.style.cursor = 'zoom-in'
     img.onclick = () => {
       showImage(index)
       dialog.showModal()
     }
   })
 
-  // Các nút điều khiển trong dialog
+  // Nut dieu khien trong modal
   const prevBtn = dialog.querySelector('.lightbox-prev')
   const nextBtn = dialog.querySelector('.lightbox-next')
   const closeBtn = dialog.querySelector('.lightbox-close')
+
+  // An nut dieu khien neu chi co 1 anh
+  if (prevBtn) prevBtn.style.display = triggers.length > 1 ? '' : 'none'
+  if (nextBtn) nextBtn.style.display = triggers.length > 1 ? '' : 'none'
 
   if (prevBtn) prevBtn.onclick = (e) => { e.stopPropagation(); showImage(currentIndex - 1) }
   if (nextBtn) nextBtn.onclick = (e) => { e.stopPropagation(); showImage(currentIndex + 1) }
@@ -36,7 +40,7 @@ function initLightbox() {
     if (e.target === dialog) dialog.close()
   }
 
-  // Bắt phím điều hướng (chỉ phản hồi khi dialog đang mở)
+  // Bat phim dieu huong (mui ten, esc)
   window.onkeydown = (e) => {
     if (!dialog.open) return
     if (e.key === 'ArrowLeft') showImage(currentIndex - 1)
@@ -46,5 +50,4 @@ function initLightbox() {
 }
 
 document.addEventListener('DOMContentLoaded', initLightbox)
-window.addEventListener('nue:load', initLightbox)
 window.addEventListener('route', initLightbox)

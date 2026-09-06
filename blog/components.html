@@ -6,6 +6,14 @@
   <span :if="tags">
     <span :each="tag in tags" class="tag">{ tag + " " }</span>
   </span>
+
+  <!-- Image Viewer Modal -->
+  <dialog id="lightbox-dialog" class="lightbox-modal">
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <button class="lightbox-prev" aria-label="Previous">❮</button>
+    <img id="lightbox-img" src="" alt="Zoomed view">
+    <button class="lightbox-next" aria-label="Next">❯</button>
+  </dialog>
 </pagefoot>
 
 <table :is="blog-entries">
@@ -18,21 +26,14 @@
   </tr>
 </table>
 
+<!-- Search blog -->
 <div :is="blog-search" class="search-box">
   <input type="search" id="blog-search-input" placeholder="Search posts by title, tag, date..." autofocus>
 </div>
 
-<!-- Dynamic Masonry Gallery Component with Lightbox -->
+<!-- Masonry Gallery -->
 <section :is="gallery" class="masonry" :if="folder && photos">
   <figure :each="file in photos.split(',')">
-    <img src="/@shared/images/{ folder }/{ file.trim() }" loading="lazy" class="lightbox-trigger">
+    <img src="/@shared/images/{ folder }/{ file.trim() }" loading="lazy">
   </figure>
-
-  <!-- Image Viewer Modal (Native HTML5 Dialog) -->
-  <dialog id="lightbox-dialog" class="lightbox-modal">
-    <button class="lightbox-close" aria-label="Close">✕</button>
-    <button class="lightbox-prev" aria-label="Previous">❮</button>
-    <img id="lightbox-img" src="" alt="Zoomed view">
-    <button class="lightbox-next" aria-label="Next">❯</button>
-  </dialog>
 </section>

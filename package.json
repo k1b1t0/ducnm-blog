@@ -1,9 +1,9 @@
 {
-  "name": "my-blog",
-  "description": "Full nue template with raw/brutalist design system",
+  "name": "ducnm-blog",
+  "description": "DucNM blog by NueJS",
   "type": "module",
   "scripts": {
-    "build": "bun run --bun nue build"
+    "build": "nue build"
   },
   "dependencies": {
     "nuekit": "latest"
