@@ -81,7 +81,7 @@ cd full
 nue
 ```
 
-![alt text](../@shared/images/tu-tao-blog-ca-nhan-voi-nuejs-image.png)
+![alt text](../@shared/images/tu-tao-blog-ca-nhan-voi-nuejs-image.webp)
 
 Tôi thường dùng 3 lệnh đơn giản
 - `nue create` - tạo template
@@ -167,7 +167,7 @@ Thực ra thế cùng là đã khá hoàn thiện một blog đủ để viết,
 ### Tìm kiếm
 Ý tưởng của tôi là: đã có sẵn danh sách blog rồi, chỉ cần lọc ra các post có chứa keyword là được.
 
-![alt text](../@shared/images/tu-tao-blog-ca-nhan-voi-nuejs-image-1.png)
+![alt text](../@shared/images/tu-tao-blog-ca-nhan-voi-nuejs-image-1.webp)
 
 Để thêm search box, tôi thêm vào một component như ở dưới. Sau đó viết một script js để đọc keyword đó, cập nhật URL và danh sách post (một cái `table`). Dựa theo [doc](https://nuejs.org/docs/page-dependencies), hoá ra tôi chỉ việc thêm file .js vào đúng folder `blog/` và nó sẽ tự thêm vào html trong artifact.
 
@@ -233,7 +233,7 @@ Tôi rất thích chụp ảnh, vậy nên từ khi tạo blog tôi đã muốn 
 
 Có nhiều tutorial hướng dẫn sử dụng `grid` nhưng tôi thấy đa phần là phải căn tay, tôi tìm được thuộc tính CSS `column-count` giúp chia nội dung ra theo cột. Mặc dù nó không tự do bằng các layout trên mạng, nhưng với tôi thấy nó cũng đã khá "nghệ" rồi.
 
-![alt text](../@shared/images/tu-tao-blog-ca-nhan-voi-nuejs-image-2.png)
+![alt text](../@shared/images/tu-tao-blog-ca-nhan-voi-nuejs-image-2.webp)
 
 Để thực hiện layout này, tôi tạo riêng 1 component cho gallery. Về cơ bản là nó sẽ ném liên tục các ảnh vào trong cái section `gallery` này.
 ```html
@@ -294,7 +294,7 @@ Một vấn đề hơi bất tiện trong thiết kế hiện tại là tôi ph�
 ### Image Viewer
 Và tính năng cuối cùng, vì ảnh được chia theo dạng gallery nhìn khá nhỏ, cần có tính năng image lightbox như [Glightbox](https://biati-digital.github.io/glightbox/). 
 
-![alt text](../@shared/images/tu-tao-blog-ca-nhan-voi-nuejs-image-3.png)
+![alt text](../@shared/images/tu-tao-blog-ca-nhan-voi-nuejs-image-3.webp)
 
 Một lightbox theo ý tôi sẽ gồm có các thành phần và chức năng như
 - 2 nút mũi tên 2 bên để di chuyển ảnh (hoặc sử dụng phím mũi tên)
