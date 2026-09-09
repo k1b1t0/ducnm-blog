@@ -1,7 +1,8 @@
 ---
 title: "EPL Dashboard"
 date: 2026-09-09
-tags: [ project ]
+tags: [ projects ]
+description: An end-to-end data pipeline processing EPL data to track team standings, match trends, and win/draw/loss ratios.
 ---
 
 # EPL Dashboard

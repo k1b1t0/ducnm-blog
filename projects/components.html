@@ -1,0 +1,35 @@
+<pagehead>
+  <pretty-date :date="date" /> • <span>{ author }</span>
+</pagehead>
+
+<pagefoot>
+  <span :if="tags">
+    <span :each="tag in tags" class="tag">{ tag + " " }</span>
+  </span>
+
+  <!-- Image Viewer Modal -->
+  <dialog id="lightbox-dialog" class="lightbox-modal">
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <button class="lightbox-prev" aria-label="Previous">❮</button>
+    <img id="lightbox-img" src="" alt="Zoomed view">
+    <button class="lightbox-next" aria-label="Next">❯</button>
+  </dialog>
+</pagefoot>
+
+<table :is="project-entries">
+  <tr :each="item in (projects_data || items || projects)">
+    <td><pretty-date :date="item.date" /></td>
+    <td>
+      <a :if="item.url" href="{ item.url }">{ item.title }</a>
+      <b :if="!item.url">{ item.title }</b>
+      <p>{{ markdown(item.description || item.desc) }}</p>
+    </td>
+  </tr>
+</table>
+
+<!-- Masonry Gallery -->
+<section :is="gallery" class="masonry" :if="folder && photos">
+  <figure :each="file in photos.split(',')">
+    <img src="/@shared/images/{ folder }/{ file.trim() }" loading="lazy">
+  </figure>
+</section>

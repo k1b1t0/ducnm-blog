@@ -29,15 +29,11 @@ collections:
     skip: [skip]
     sort: date desc
 
-  design:
-    include: [docs/]
-    tags: [design]
-    sort: order
-
-  dev:
-    include: [docs/]
-    tags: [dev]
-    sort: order
+  projects:
+    include: [blog/]
+    skip: [skip]
+    tags: [projects]
+    sort: date desc
 
 server:
   reload: true
