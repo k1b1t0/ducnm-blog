@@ -2,6 +2,7 @@
 title: "Những bộ phim chữa lành tôi thích"
 date: 2026-06-22
 tags: [ movies, collection ]
+description: "Danh sách những bộ phim giải trí, rất phù hợp xem với gia đình và xem một mình lúc buồn chán hoặc thiếu động lực"
 ---
 
 # Những bộ phim chữa lành tôi thích

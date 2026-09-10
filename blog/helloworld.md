@@ -2,6 +2,7 @@
 title: "Hello World"
 date: 2026-04-22
 tags: [ project ]
+description: "Lại một cái web cá nhân nữa?"
 ---
 
 # Hello World

@@ -2,10 +2,10 @@
 title: "Reservoir Dogs (1992)"
 date: 2026-08-06
 tags: [ movie ]
+description: "Five total strangers. Team up for the perfect crime. They don't know each other's name. But they've got each other's number"
 ---
 
 # Reservoir Dogs (1992)
-
 > Five total strangers  
 > Team up for the perfect crime  
 > They don't know each other's name  

@@ -2,6 +2,7 @@
 title: "Hành trình tư duy với Dark mode"
 date: 2026-06-08
 tags: [ dev-log ]
+description: "Vận lộn với cái dark mode cũ"
 ---
 
 # Hành trình tư duy với Dark mode
