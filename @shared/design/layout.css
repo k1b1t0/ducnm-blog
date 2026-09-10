@@ -1,4 +1,9 @@
 @layer base {
+  html {
+    /* giu co dinh khoang trong scrollbar de tranh bi nhay layout giua cac trang */
+    scrollbar-gutter: stable;
+  }
+
   body {
     max-width: 75ch;
     flex-direction: column;
