@@ -23,6 +23,12 @@
       width: 25%;
     }
 
+    /* tieu de bai viet trong bang */
+    td > a {
+      font-family: var(--font-heading);
+      font-weight: 600;
+    }
+
     tfoot td {
       color: var(--base-800);
       font-weight: 500;

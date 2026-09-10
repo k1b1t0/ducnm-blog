@@ -24,7 +24,7 @@
   h2,
   h3,
   h4 {
-    font-family: 'Roboto Slab', serif;
+    font-family: var(--font-heading);
     margin-block: 0.5em;
     text-wrap: balance;
     line-height: 1.25;
@@ -42,9 +42,20 @@
 
   a {
     color: var(--link);
+    text-decoration: none;
+    /* hieu ung gach chan chay tu trai qua phai */
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1.5px;
+    transition: background-size .25s ease-out;
 
     &:visited {
-      color: var(--visited);
+      color: var(--link);
+    }
+
+    &:hover {
+      background-size: 100% 1.5px;
     }
 
     &[name] {
