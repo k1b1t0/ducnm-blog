@@ -49,5 +49,10 @@ function initLightbox() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', initLightbox)
+// Chay ngay neu DOM da san sang hoac lang nghe su kien
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initLightbox)
+} else {
+  initLightbox()
+}
 window.addEventListener('route', initLightbox)
