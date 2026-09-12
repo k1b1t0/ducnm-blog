@@ -8,13 +8,12 @@
   </span>
 </pagefoot>
 
-<table :is="project-entries">
-  <tr :each="item in (projects_data || items || projects)">
+<table :is="gallery-entries">
+  <tr :each="item in (gallery_data || items || gallery)">
     <td><pretty-date :date="item.date" /></td>
     <td>
       <a :if="item.url" href="{ item.url }">{ item.title }</a>
       <b :if="!item.url">{ item.title }</b>
-      <p>{{ markdown(item.description || item.desc) }}</p>
     </td>
   </tr>
 </table>

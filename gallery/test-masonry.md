@@ -1,4 +1,5 @@
 ---
+title: "Test Masonry Gallery"
 date: 2025-08-01
 ---
 

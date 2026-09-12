@@ -35,5 +35,10 @@ collections:
     tags: [projects]
     sort: date desc
 
+  gallery:
+    include: [gallery/]
+    skip: [skip]
+    sort: date desc
+
 server:
   reload: true

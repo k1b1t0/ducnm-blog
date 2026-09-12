@@ -1,0 +1,14 @@
+<!-- Masonry Gallery Component -->
+<section :is="gallery" class="masonry" :if="folder && photos">
+  <figure :each="file in photos.split(',')">
+    <img src="/@shared/images/{ folder }/{ file.trim() }" loading="lazy">
+  </figure>
+</section>
+
+<!-- Image Viewer Modal (Toan trang) -->
+<dialog :is="lightbox-modal" id="lightbox-dialog" class="lightbox-modal">
+  <button class="lightbox-close" aria-label="Close">✕</button>
+  <button class="lightbox-prev" aria-label="Previous">❮</button>
+  <img id="lightbox-img" src="" alt="Zoomed view">
+  <button class="lightbox-next" aria-label="Next">❯</button>
+</dialog>
