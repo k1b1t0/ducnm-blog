@@ -1,7 +1,5 @@
 # ducnm-blog
 
-Personal blog & projects site built with [NueJS](https://nuejs.org).
-
 ## Scripts
 
 ### 1. Tạo bài viết mới (`./new.sh`)
