@@ -1,7 +1,7 @@
 ---
 title: "Hành trình DiscoverNUS của mình"
 date: 2026-10-04
-tags: [ [share] ]
+tags: [share]
 ---
 
 # Hành trình DiscoverNUS của mình

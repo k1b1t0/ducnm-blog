@@ -26,17 +26,19 @@
     align-items: center;
     display: flex;
     gap: 1em;
+    flex-wrap: wrap;
 
-    nav:last-of-type {
+    /* nav:last-of-type {
       margin-left: auto;
       justify-content: right;
-    }
+    } */
   }
 
   nav {
     align-items: center;
     display: flex;
-    gap: 2em;
+    gap: 1em;
+    flex-wrap: wrap;
 
     a {
 
