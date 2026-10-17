@@ -2,11 +2,12 @@
 title: "Hành trình DiscoverNUS của mình"
 date: 2026-10-04
 tags: [share]
+description: DiscoverNUS cho mình 4 tháng trải nghiệm học tập ở NUS và sống ở Singapore, giờ mình chia sẻ lại hành trình của mình.
 ---
 
 # Hành trình DiscoverNUS của mình
 
-DiscoverNUS cho mình cơ hội 4 tháng trải nghiệm học tập ở NUS và sống ở Singapore, và giờ mình muốn chia sẻ lại hành trình của mình, cũng như một số kinh nghiệm "mình ước mình biết trước khi X".
+DiscoverNUS cho mình cơ hội 4 tháng trải nghiệm học tập ở NUS và sống ở Singapore, giờ mình chia sẻ lại hành trình của mình, cũng như một số kinh nghiệm "mình ước mình biết trước khi X".
 
 ## Giới thiệu chương trình DiscoverNUS
 DiscoverNUS là chương trình dành cho các sinh viên từ các nước Đông Nam Á để trao đổi một kỳ ở NUS. Đặc biệt là sinh viên cuối năm 2 có thể apply để năm 3 trao đổi và không yêu cầu quá nặng về bằng tiếng Anh (nếu không có thì phỏng vấn).
