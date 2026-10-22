@@ -28,7 +28,16 @@
     /* tieu de bai viet trong bang */
     td>a {
       font-family: var(--font-heading);
+      font-size: 1.15rem;
       font-weight: 600;
+      display: inline-block;
+    }
+
+    /* mo ta cho bai viet */
+    td>p,
+    td>time {
+      font-size: 0.9rem;
+      color: var(--base-600);
     }
 
     tfoot td {

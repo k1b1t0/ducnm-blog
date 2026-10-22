@@ -5,7 +5,7 @@
   }
 
   body {
-    max-width: 75ch;
+    max-width: 65ch;
     flex-direction: column;
     min-height: 100vh;
     margin: 0 auto;

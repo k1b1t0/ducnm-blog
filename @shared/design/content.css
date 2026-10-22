@@ -85,6 +85,14 @@
     }
   }
 
+  article p,
+  article li {
+    font-family: 'Lora', Georgia, serif;
+    line-height: 1.7;
+    color: var(--base-800);
+    margin-block: 1.4rem;
+  }
+
   ol,
   ul {
     padding-left: 1em
