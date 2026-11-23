@@ -1,7 +1,7 @@
 ---
 title: "Anh chàng người Anh"
 date: 2026-08-28
-tags: [ fleeting ]
+tags: [ book, fleeting ]
 ---
 
 # Anh chàng người Anh
